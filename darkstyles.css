@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body,html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+}
+
+body {
+    width: 100%;
+    background-color: #121212;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+}
+
+.wholePage {
+  width: 75%;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+main {
+    padding-top: 150px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    position: fixed;
+    background-color: #000000;
+    padding: 20px 10px;
+    margin: 0px 0 15px 0;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+    width: 100vw;
+    z-index: 1111;
+    float: left;
+  }
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+        
+    
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a.logo {
+    font-size: 35px;
+    font-weight: normal;
+    font-family: 'Leckerli One', cursive;
+
+  }
+  
+  /* Change the background color on mouse-over */
+  .header a:hover {
+    background-color: #121212;
+  }
+    
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+    margin-right: 60px;
+  }
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+      padding: 25px;
+
+    }
+    .header-right {
+      display: none;
+    }
+
+  }
+
+aside{
+    float: right;
+    width:35%;
+    background-color: inherit;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+    color: #ffffff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    border-radius: 0 0 15px 15px;
+    height:360px;
+
+  }
+  
+ul li {
+    padding: 8px 16px;
+    border-bottom: 0px solid #ddd;
+    border-left: 0px solid #ddd;
+}
+
+li:first-of-type {
+    border-top: 0px solid #ddd;
+    border-radius: 5px 0 0 0;
+  }
+
+li:last-of-type {
+border-bottom: none;
+}
+
+li {
+    background-color: inherit;
+    font-size: 16px;
+    transition: all .2s ease-in;
+
+}
+
+i {
+    transition: all .2s ease-in;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: #000000;
+}
+
+.feedHeader {
+    background-color: #000000;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: solid 1px #363636;
+    color: #ffffff;
+}
+
+.userEmail {
+    color:#949494
+}
+
+.userProfileThumbnail {
+    width: 40px;
+    clip-path: circle();
+}
+
+.userProfilePicture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0 2px #363636, 0px 0px 0 5px #363636;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+.formContainer {
+display: flex;
+align-items: top;
+justify-content: left;
+height: 100%;
+}
+
+.text {
+padding-left: 15px;
+}
+
+.asideTitle {
+    padding: 18px;
+    font-size: 16px;
+}
+
+.newPost {
+    color: #ffffff;
+    width: 62%;
+    height: 230px;
+}
+
+article {
+    background: #000000;
+    width:60%;
+    height: 90%;
+    border: solid 1px #363636;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    -webkit-animation:pop-in 0.5s;
+    -moz-animation:pop-in 0.5s;
+    -ms-animation:pop-in 0.5s;
+    color: #ffffff  ;
+}
+
+
+@-webkit-keyframes pop-in {
+    0% { opacity: 0; -webkit-transform: scale(0.5); }
+    100% { opacity: 1; -webkit-transform: scale(1); }
+    }
+    @-moz-keyframes pop-in {
+    0% { opacity: 0; -moz-transform: scale(0.5); }
+    100% { opacity: 1; -moz-transform: scale(1); }
+    }
+    @keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.feedImages {
+    width: 100%;
+    display: block;
+}
+
+.socialFunctions {
+    padding: 15px;
+}
+
+.commentsAndLikes {
+    padding: 0 15px 15px 15px;
+    width: 70%;
+}
+
+.like:hover {
+    color: #ED4956;
+
+}
+
+.showMoreComments {
+    color: #9E9E9E;
+}
+
+.commentSection {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+    align-items: center;
+}
+
+.postComment {
+    float: left;
+    width: 90%;
+}
+
+.moreOptions {
+    text-align: right;
+    margin-left: -15px;
+    width: 10%;
+}
+
+.postCommentInput{
+    display: inline;
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    padding-left: 15px;
+    border:none;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 0 0 0 5px;
+    background: #000000;
+    color: #ffffff;
+
+}
+
+
+hr {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    border: 0; 
+    border-top: 1px solid #363636;
+}
+
+.formData {
+    padding-left: 70px;
+    margin-top: 0px;
+    font-size: 21px;
+    width: 100%;
+}
+
+.formDataInput {
+    width: calc(100% - 50px);
+    margin-bottom: 10px;
+    font-size: 16px;
+    outline: none;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.formUploadPicture {
+    background: white;
+}   
+
+input[type="file"]{
+    height:21px;
+}
+
+input[type="file"]::-webkit-file-upload-button{
+    height: 21px;
+}
+
+.postPicture {
+    width: calc(100% - 38px);
+    padding: 5px;
+    background: ddd;
+    border-radius: 4px; 
+    border: 1px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+}
+
+input, label {
+    display:block;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.username {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+     -ms-animation: fadein 1s; /* Internet Explorer */
+      -o-animation: fadein 1s; /* Opera < 12.1 */
+         animation: fadein 1s;
+}
+
+.profilepicfadein {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+     -ms-animation: fadein 1s; /* Internet Explorer */
+      -o-animation: fadein 1s; /* Opera < 12.1 */
+         animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+@media only screen and (max-width: 1280px) {
+    aside {
+        display: none;
+    }
+    article {
+        width: 100%;
+    }
+
+    
+    .commentsAndLikes {
+        font-size: 14px;
+        width: 85%;
+
+    }
+
+    .newPost {
+        color: black;
+        width: 100%;
+        height: 300px;
+    }
+
+
+}
+
+@media only screen and (max-width: 750px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        width: 90%;
+    }
+    article {
+        width: 100%;
+        margin-left: -1px;
+    }
+
+    
+    .commentsAndLikes {
+        font-size: 14px;
+        width: 85%;
+
+    }
+
+    .newPost {
+        display: none;
+    }
+
+    .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+
+
+    main {
+        padding-top: 120px;
+    }
+    
+      
+}

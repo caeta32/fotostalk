@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotostalk</title>
+    <link id="change-theme" rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <script src="scripts.js"></script>
+    <script async src="https://api.countapi.xyz/hit/190.134.124.249/index.html/visits?  callback=callbackName"></script>
+  </head>
+
+  <body onload="retrieveLocalStorageItems()">
+    <h1>This page got <span id="visits"></span> views.</h1>
+
+    <div class="header">
+      <a href="#default" class="logo">Fotostalk</a>
+      <div class="header-right">
+        <a href="#home">
+          <i class="fa-regular fa-user fa-xl"></i>
+        </a>
+        <a id="light-theme" href="#home" onclick="applyCSS('styles.css'); return false;">
+          <i class="fa-regular fa-sun fa-xl"></i>
+        </a>
+        <a id="dark-theme" href="#home" onclick="applyCSS('darkstyles.css'); return false;">
+          <i class="fa-regular fa-moon fa-xl"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="wholePage">
+      
+        <main>
+
+            <aside>
+                <h3 class="asideTitle">Usuarios</h3>
+                <ul id="user-list">
+                    <!-- JSONPlaceholder aqui -->
+                </ul>
+            </aside>
+
+            <form class="newPost">
+                <div class="formContainer">
+                    <div>
+                        <img id="profilepicture" src="img/avatar-placeholder.png" class="userProfilePicture">
+                    </div>
+                    <div id="main-user" class="formData">
+                        <b id="username">UnUsuarioRandom</b>
+                        <br>
+                        <br>
+                        <label for="description">Descripcion:</label>
+                        <input type="text" id="description" class="formDataInput" placeholder="Descripcion...">
+                        <label for="upload">Foto a subir:</label>
+                        <input type="file" id="upload" class="formDataInput formUploadPicture" accept="image/*">
+                        <button type="button" class="postPicture" onclick="makePost()">
+                        <b>Agregar foto</b>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="articleSection"></div>
+        </main>
+
+    </div>
+    
+  </body>
+  <script>
+    function callbackName(response) {
+    document.getElementById('visits').innerText = response.value;
+    }
+  </script>
+
+</html>
