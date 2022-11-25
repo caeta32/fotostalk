@@ -13,7 +13,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="img/site.webmanifest">
     <script src="scripts.js"></script>
-    <script async src="https://api.countapi.xyz/hit/fotostalk.onrender.com/visits?  callback=callbackName"></script>
   </head>
 
   <body onload="retrieveLocalStorageItems()">
@@ -72,9 +71,13 @@
     
   </body>
   <script>
-    function callbackName(response) {
-    document.getElementById('visits').innerText = response.value;
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/fotostalk.onrender.com/visits?  callback=callbackName");
+    xhr.responseType = "json";
+    xhr.onload = function() {
+        document.getElementById('visits').innerText = this.response.value;
     }
+    xhr.send();
   </script>
 
 </html>
